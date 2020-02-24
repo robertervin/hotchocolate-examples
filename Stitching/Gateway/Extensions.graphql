@@ -1,5 +1,11 @@
 extend type Customer {
-  contracts: [Contract!]
+  contractsByRootId: [Contract!]
     @delegate(schema: "contract", path: "contracts(customerId:$fields:id)")
-  foo: String @computed(dependantOn: ["id", "name"])
+  contractsByNestedId: [Contract!]
+    @delegate(schema: "contract", path: "contracts(customerId:$fields:identifiers.customerId)")
+}
+
+extend type CustomerIdentifiers {
+  contracts: [Contract!]
+    @delegate(schema: "contract", path: "contracts(customerId:$fields:customerId)")
 }

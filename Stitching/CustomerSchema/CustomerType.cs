@@ -17,4 +17,14 @@ namespace Demo.Customers
                 .Type<ConsultantType>();
         }
     }
+
+    public class CustomerIdentifiersType
+        : ObjectType<CustomerIdentifiers>
+    {
+        protected override void Configure(
+            IObjectTypeDescriptor<CustomerIdentifiers> descriptor)
+        {
+            descriptor.Field(t => t.CustomerId).Type<NonNullType<IdType>>();
+        }
+    }
 }

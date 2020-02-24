@@ -36,10 +36,10 @@ namespace Demo.Contracts
 
         public IEnumerable<IContract> GetContracts(string customerId)
         {
-            IdValue value = _idSerializer.Deserialize(customerId);
+            // IdValue value = _idSerializer.Deserialize(customerId);
 
             return _contractStorage.Contracts
-                .Where(t => t.CustomerId.Equals(value.Value));
+                .Where(t => t.CustomerId.Equals(customerId));
         }
     }
 }

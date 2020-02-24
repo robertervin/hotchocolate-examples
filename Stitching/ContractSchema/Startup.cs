@@ -20,7 +20,7 @@ namespace Demo.Contracts
                 c.RegisterType<LifeInsuranceContractType>();
                 c.RegisterType<SomeOtherContractType>();
 
-                c.UseGlobalObjectIdentifier();
+                // c.UseGlobalObjectIdentifier();
             }));
         }
 

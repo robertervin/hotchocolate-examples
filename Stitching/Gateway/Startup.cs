@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using HotChocolate;
 using HotChocolate.AspNetCore;
+using HotChocolate.AspNetCore.Voyager;
 using HotChocolate.AspNetCore.Subscriptions;
 using HotChocolate.Execution;
 using HotChocolate.Resolvers;
@@ -64,6 +65,7 @@ namespace Demo.Stitching
 
             app.UseGraphQL();
             app.UsePlayground();
+            app.UseVoyager();
         }
     }
 }

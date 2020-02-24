@@ -20,7 +20,7 @@ namespace Demo.Customers
         {
             IdValue value = _idSerializer.Deserialize(id);
             return _repository.Customers
-                .FirstOrDefault(t => t.Id.Equals(value.Value));
+                .FirstOrDefault(t => t.Identifiers.CustomerId.Equals(value.Value));
         }
 
         public IEnumerable<Customer> GetCustomers()

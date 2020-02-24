@@ -9,18 +9,21 @@ namespace Demo.Customers
             new Customer
             {
                 Id = "1",
+                Identifiers = new CustomerIdentifiers() { CustomerId = "1" },
                 Name = "Freddy Freeman",
                 ConsultantId = "1"
             },
             new Customer
             {
                 Id = "2",
+                Identifiers = new CustomerIdentifiers() { CustomerId = "2" },
                 Name = "Carol Danvers",
                 ConsultantId = "1"
             },
             new Customer
             {
                 Id = "3",
+                Identifiers = new CustomerIdentifiers() { CustomerId = "3" },
                 Name = "Walter Lawson",
                 ConsultantId = "2"
             }

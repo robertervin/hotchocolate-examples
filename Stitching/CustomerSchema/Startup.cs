@@ -17,7 +17,8 @@ namespace Demo.Customers
             services.AddGraphQL(Schema.Create(c =>
             {
                 c.RegisterQueryType<QueryType>();
-                c.UseGlobalObjectIdentifier();
+                c.RegisterType<CustomerIdentifiersType>();
+                // c.UseGlobalObjectIdentifier();
             }));
         }
 
